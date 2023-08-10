@@ -1,0 +1,6 @@
+version: "3"
+services:
+  shopr-app:
+    image: shopr-app
+    ports:
+    - 8080:8080
