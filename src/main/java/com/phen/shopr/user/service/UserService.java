@@ -1,17 +1,15 @@
-package com.phen.shopr.application.user.service;
+package com.phen.shopr.user.service;
 
-import com.phen.shopr.application.user.VO.UserRecord;
-import com.phen.shopr.application.user.dto.SignUpRequest;
-import com.phen.shopr.domain.user.User;
-import com.phen.shopr.domain.user.UserRepository;
-import com.phen.shopr.domain.user.UserVO;
+import com.phen.shopr.user.VO.UserResponse;
+import com.phen.shopr.user.dto.SignUpRequest;
+import com.phen.shopr.user.model.User;
+import com.phen.shopr.user.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.NoSuchElementException;
-import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
@@ -42,7 +40,7 @@ public class UserService {
         }
 
         return users.stream()
-                .map(user -> new UserRecord(new UserVO(user)))
+                .map(this::mapToUserResponse)
                 .collect(Collectors.toList());
     }
 
@@ -77,6 +75,18 @@ public class UserService {
                 .username(request.username())
                 .email(request.email())
                 .password(request.password())
+                .build();
+    }
+
+    private UserResponse mapToUserResponse(User user) {
+        return UserResponse.builder()
+                .id(user.getId())
+                .firstName(user.getFirstName())
+                .lastName(user.getLastName())
+                .username(user.getUsername())
+                .email(user.getEmail())
+                .bio(user.getBio())
+                .image(user.getImage())
                 .build();
     }
 }

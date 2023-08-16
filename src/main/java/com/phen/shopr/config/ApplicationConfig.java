@@ -1,6 +1,6 @@
 package com.phen.shopr.config;
 
-import com.phen.shopr.domain.user.UserRepository;
+import com.phen.shopr.user.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

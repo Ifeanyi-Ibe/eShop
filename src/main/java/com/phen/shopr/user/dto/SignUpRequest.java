@@ -1,4 +1,4 @@
-package com.phen.shopr.application.user.dto;
+package com.phen.shopr.user.dto;
 
 import com.fasterxml.jackson.annotation.JsonRootName;
 

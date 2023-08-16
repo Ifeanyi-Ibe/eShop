@@ -1,10 +1,10 @@
-package com.phen.shopr.application.auth;
+package com.phen.shopr.auth;
 
 
 import com.phen.shopr.config.JwtService;
-import com.phen.shopr.domain.user.Role;
-import com.phen.shopr.domain.user.User;
-import com.phen.shopr.domain.user.UserRepository;
+import com.phen.shopr.user.enums.Role;
+import com.phen.shopr.user.model.User;
+import com.phen.shopr.user.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;

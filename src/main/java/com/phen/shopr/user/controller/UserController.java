@@ -1,9 +1,9 @@
-package com.phen.shopr.application.user.controller;
+package com.phen.shopr.user.controller;
 
-import com.phen.shopr.application.user.VO.UserRecord;
-import com.phen.shopr.application.user.service.UserService;
-import com.phen.shopr.domain.user.User;
-import com.phen.shopr.domain.user.UserVO;
+import com.phen.shopr.user.VO.UserRecord;
+import com.phen.shopr.user.service.UserService;
+import com.phen.shopr.user.model.User;
+import com.phen.shopr.user.VO.UserVO;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

@@ -1,5 +1,6 @@
-package com.phen.shopr.domain.user;
+package com.phen.shopr.user.model;
 
+import com.phen.shopr.user.enums.Role;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import lombok.*;

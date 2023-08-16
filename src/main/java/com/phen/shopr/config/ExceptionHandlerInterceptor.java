@@ -22,7 +22,7 @@ public class ExceptionHandlerInterceptor extends ResponseEntityExceptionHandler 
 
     @ExceptionHandler(IllegalArgumentException.class)
     public ResponseEntity<CustomErrorResponse> handle(IllegalArgumentException exc) {
-        log.info(exc.getMessage(), exc);
+//        log.info(exc.getMessage(), exc);
 
         CustomErrorResponse error = new CustomErrorResponse();
 
@@ -49,7 +49,7 @@ public ResponseEntity<Object> handleConstraintViolation(ConstraintViolationExcep
 
     @ExceptionHandler(NoSuchElementException.class)
     public ResponseEntity<CustomErrorResponse> handle(NoSuchElementException exc) {
-        log.info(exc.getMessage(), exc);
+//        log.info(exc.getMessage(), exc);
 
         CustomErrorResponse error = new CustomErrorResponse();
 
@@ -62,7 +62,7 @@ public ResponseEntity<Object> handleConstraintViolation(ConstraintViolationExcep
 
     @ExceptionHandler(AccessDeniedException.class)
     public ResponseEntity<CustomErrorResponse> handle(AccessDeniedException exc) {
-        log.info(exc.getMessage(), exc);
+//        log.info(exc.getMessage(), exc);
 
         CustomErrorResponse error = new CustomErrorResponse();
 
@@ -74,7 +74,7 @@ public ResponseEntity<Object> handleConstraintViolation(ConstraintViolationExcep
 
     @ExceptionHandler(AuthenticationException.class)
     public ResponseEntity<CustomErrorResponse> handle(AuthenticationException exc) {
-        log.info(exc.getMessage(), exc);
+//        log.info(exc.getMessage(), exc);
 
         CustomErrorResponse error = new CustomErrorResponse();
 
@@ -86,7 +86,7 @@ public ResponseEntity<Object> handleConstraintViolation(ConstraintViolationExcep
 
     @ExceptionHandler(Exception.class)
     public ResponseEntity<CustomErrorResponse> handle(Exception exc) {
-        log.info(exc.getMessage(), exc);
+//        log.info(exc.getMessage(), exc);
 
         CustomErrorResponse error = new CustomErrorResponse();
 

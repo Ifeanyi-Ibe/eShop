@@ -1,4 +1,4 @@
-package com.phen.shopr.application.auth;
+package com.phen.shopr.auth;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
